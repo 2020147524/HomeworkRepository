@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<h1>New HTML5 Input Types Demo</h1>
-		<form method = "GET" action = "https://www.example.com">
+		<form method = "GET" autocomplete = "on" action = "https://www.example.com">
 			<p>
 				<label>Color: <input name = "color" type = "color" autofocus /></label>
 						(Hexadecimal code such as #ADD8E6)
@@ -28,6 +28,25 @@
 				<label>Search: 
 					<input name = "search" type = "search" placeholder = "search query" /> </label>
 					(Enter your search query here.)
+			</p>
+			<p>
+				<label for = "txtList">Birth Month:
+					<input type = "text" id = "txtList" name = "month" list = "months" placeholder = "Select a month" />
+					<datalist id = "months">
+						<option value = "January">
+						<option value = "February">
+						<option value = "March">
+						<option value = "April">
+						<option value = "May">
+						<option value = "June">
+						<option value = "July">
+						<option value = "August">
+						<option value = "September">
+						<option value = "October">
+						<option value = "November">
+						<option value = "December">
+					</datalist>
+				</label>
 			</p>
 			<p>
 				<input type = "submit" value = "Submit" />
