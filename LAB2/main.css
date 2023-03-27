@@ -1,13 +1,18 @@
 body {
 	background-color: #f9f4d7;
-	font-family: arial, helvetica, sans-serif; 
 	font-size: 10pt;
+	font-family: arial, helvetica, sans-serif; 
 }
-h1 {text-align: center;}
+h1 {
+	text-align: center;
+}
+input {
+	padding: 0;
+	margin: 0;
+	border: 1px;
+	width: 30;
+	height: 30;
+}
 
 a.nodec {text-decoration: none;}
 a:hover {text-decoration: underline; color: red;}
-li em {color: blue;}
-em {text-decoration: underline;}
-ul {margin-left: 50px;}
-ul ul {margin-left: 25px; font-size: .8em;}
