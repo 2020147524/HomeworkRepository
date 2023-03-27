@@ -1,0 +1,7 @@
+body {font-family: arial, helvetica, sans-serif;}
+a.nodec {text-decoration: none;}
+a:hover {text-decoration: underline; color: red;}
+li em {color: blue;}
+em {text-decoration: underline;}
+ul {margin-left: 50px;}
+ul ul {margin-left: 25px; font-size: .8em;}
