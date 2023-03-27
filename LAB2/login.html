@@ -6,81 +6,22 @@
 	</head>
 	<body>
 		<h1>New HTML5 Input Types Demo</h1>
+		<a href = "http://2020147524.github.io/HomeworkRepository/LAB2/login.html">로그인</a>
+		<a href = "http://2020147524.github.io/HomeworkRepository/LAB2/signup.html">회원가입</a>
+		<br/>
 		<form method = "GET" autocomplete = "on" action = "https://www.example.com">
 			<p>
-				<label>Color: <input name = "color" type = "color" autofocus /></label>
-						(Hexadecimal code such as #ADD8E6)
+				<label>유저 아이디: <input name = "user_id" type = "text" placeholder = "아이디를 입력하세요" required /> </label>
 			</p>
 			<p>
-				<label>Date: <input name = "date" type = "date" /> </label> (yyyy-mm-dd)
+				<label>비밀번호: <input name = "password" type = "text" placeholder = "비밀번호 입력하세요" required /> </label>
 			</p>
 			<p>
-				<label>Email: <input name = "email" type = "email" placeholder = "name@domain.com" required /> </label> (name@domain.com)
+				<label>비밀번호 확인: <input name = "password correct" type = "text" placeholder = "비밀번호 확인" required /> </label>
 			</p>
 			<p>
-				<label>Number: <input name = "number" type = "number" min = "0" max = "7" step = "1" value = "4" /> </label> (Enter a number between 0 and 7)
-			</p>
-			<p>
-				<label for = "range">Range:</label>
-					0 <input id = "range" name = "range" type = "range" min = "0" max = "20" value = "10" /> 20
-			</p>
-			<p>
-				<label>Search: 
-					<input name = "search" type = "search" placeholder = "search query" /> </label>
-					(Enter your search query here.)
-			</p>
-			<p>
-				<strong>사이트 방문 목적:</strong><br/>
-				<label>
-					<input name = "purpose" type = "checkbox" value = "buy" />
-					구매
-				</label>
-				<label>
-					<input name = "purpose" type = "checkbox" value = "sell" />
-					판매
-				</label>
-			</p>
-			<p>
-				<strong>관심있는 상품:</strong><br/>
-				<label>
-					<input name = "interest" type = "radio" value = "cloth" />
-					옷
-				</label>
-				<label>
-					<input name = "interest" type = "radio" value = "food" />
-					음식
-				</label>
-				<label>
-					<input name = "interest" type = "radio" value = "game" />
-					게임
-				</label>
-				<label>
-					<input name = "interest" type = "radio" value = "medicine" />
-					약
-				</label>
-			</p>
-			<p>
-				<label for = "txtList"> 태어난 달 :
-					<input type = "text" id = "txtList" name = "month" list = "months" placeholder = "Select a month" />
-					<datalist id = "months">
-						<option value = "January">
-						<option value = "February">
-						<option value = "March">
-						<option value = "April">
-						<option value = "May">
-						<option value = "June">
-						<option value = "July">
-						<option value = "August">
-						<option value = "September">
-						<option value = "October">
-						<option value = "November">
-						<option value = "December">
-					</datalist>
-				</label>
-			</p>
-			<p>
-				<input type = "submit" value = "Submit" />
-				<input type = "reset" value = "Clear" />
+				<input type = "submit" value = "로그인" />
+				<input type = "reset" value = "초기화" />
 			</p>
 		</form>
 	</body>
