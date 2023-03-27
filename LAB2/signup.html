@@ -11,26 +11,29 @@
 		<br/>
 		<form method = "GET" autocomplete = "on" action = "https://www.example.com">
 			<p>
-				<label>Color: <input name = "color" type = "color" autofocus /></label>
+				<label>이름: <input name = "name" type = "text" placeholder = "이름을 입력하세요" required /> </label>
+			</p>
+			<p>
+				<label>유저 아이디: <input name = "user_id" type = "text" placeholder = "아이디를 입력하세요" required /> </label>
+			</p>
+			<p>
+				<label>비밀번호: <input name = "password" type = "text" placeholder = "비밀번호 입력하세요" required /> </label>
+			</p>
+			<p>
+				<label>비밀번호 확인: <input name = "password correct" type = "text" placeholder = "비밀번호 확인" required /> </label>
+			</p>
+			<p>
+				<label>생일: <input name = "date" type = "date" /> </label>
+			</p>
+			<p>
+				<label>좋아하는 색: <input name = "color" type = "color" autofocus /></label>
 						(Hexadecimal code such as #ADD8E6)
 			</p>
 			<p>
-				<label>Date: <input name = "date" type = "date" /> </label> (yyyy-mm-dd)
+				<label>이메일: <input name = "email" type = "email" placeholder = "name@domain.com" required /> </label> (name@domain.com)
 			</p>
 			<p>
-				<label>Email: <input name = "email" type = "email" placeholder = "name@domain.com" required /> </label> (name@domain.com)
-			</p>
-			<p>
-				<label>Number: <input name = "number" type = "number" min = "0" max = "7" step = "1" value = "4" /> </label> (Enter a number between 0 and 7)
-			</p>
-			<p>
-				<label for = "range">Range:</label>
-					0 <input id = "range" name = "range" type = "range" min = "0" max = "20" value = "10" /> 20
-			</p>
-			<p>
-				<label>Search: 
-					<input name = "search" type = "search" placeholder = "search query" /> </label>
-					(Enter your search query here.)
+				<label>좋아하는 숫자: <input name = "number" type = "number" min = "0" max = "7" step = "1" value = "4" /> </label> (Enter a number between 0 and 7)
 			</p>
 			<p>
 				<strong>사이트 방문 목적:</strong><br/>
@@ -87,4 +90,4 @@
 			</p>
 		</form>
 	</body>
-</html>s
+</html>
