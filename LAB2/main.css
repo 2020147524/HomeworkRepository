@@ -25,13 +25,13 @@ input {
 	margin: 10px;
 }
 .signup-button {
-	color: #BDD99E;
+	background-color: #BDD99E;
 }
 .login-button {
-	color: #BDD99E;
+	background-color: #BDD99E;
 }
 .reset-button {
-	color: #FF4747;
+	background-color: #FF4747;
 }
 
 a.nodec {text-decoration: none;}
