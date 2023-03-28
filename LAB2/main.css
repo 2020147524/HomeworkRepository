@@ -9,9 +9,12 @@ h1 {
 input {
 	padding: 0;
 	margin: 0;
-	border: 1px;
-	width: 30;
-	height: 30;
+}
+.solid {
+	border-style: solid;
+	border: 3px;
+	width: 200px;
+	height: 800px;
 }
 
 a.nodec {text-decoration: none;}
