@@ -10,6 +10,17 @@ input {
 	padding: 0;
 	margin: 0;
 }
+.main-contents {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 5px solid;
+	width: 800px;
+	height: 850px;
+	padding: 20px;
+	margin: 10px;
+
+}
 .signup-border {
 	border: 5px solid;
 	width: 300px;

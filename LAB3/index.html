@@ -4,29 +4,87 @@
 		<meta charset="utf-8">
 		<title>LAB3 - main</title>
 		<link rel = "stylesheet" type = "text/css" href = "main.css">
+
+		<style type="text/css">
+			.header-text
+			{
+				animation-name: movingtext;
+				animation-duration: 2s;
+			}
+			@keyframes movingtext
+			{
+				from {
+					transform: translateX(25%);
+				}
+
+				to {
+					transform: translateX(0%);
+				}
+			}
+		</style>
+
+		<style type="text/css">
+			.flex-root {
+				display: flex;
+				flex-direction: column;
+				font-size: 30px;
+				text-align: center;
+				max-width: 1020px;
+			}
+			.flex-navigation {
+				display: flex;
+				flexdirection : row;
+				flex-wrap: wrap;
+				justify-content: left;
+			}
+			.flex-navigation > a {
+				margin: 10px;
+			}
+			.flex-container {
+				display: flex;
+				flex-direction: row;
+				font-size: 30px;
+				text-align: center;
+				max-width: 200px;
+			}
+			/* Responsive layout - makes a one column-layout instead of two-column layout */
+			@media (max-width: 1020px) {
+				.flex-container {
+					flex-direction: column;
+				}
+			}
+
+			.pencilcase:hover {
+				transform: scale(1.5);
+				transition: all 2s;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Welcome to INP shop!</h1>
-		<div class = "login-border">
-			<a href = "http://2020147524.github.io/HomeworkRepository/LAB3">메인 페이지</a>
-			<a href = "http://2020147524.github.io/HomeworkRepository/LAB3/login.html">로그인</a>
-			<a href = "http://2020147524.github.io/HomeworkRepository/LAB3/signup.html">회원가입</a>
-			<br/>
-			<form method = "GET" autocomplete = "on" action = "https://www.example.com">
-				<p>
-					<label>유저 아이디: <input name = "user_id" type = "text" placeholder = "아이디를 입력하세요" required /> </label>
-				</p>
-				<p>
-					<label>비밀번호: <input name = "password" type = "text" placeholder = "비밀번호 입력하세요" required /> </label>
-				</p>
-				<p>
-					<label>비밀번호 확인: <input name = "password correct" type = "text" placeholder = "비밀번호 확인" required /> </label>
-				</p>
-				<p>
-					<input class = "login-button" type = "submit" value = "로그인" />
-					<input class = "reset-button" type = "reset" value = "초기화" />
-				</p>
-			</form>
+		<div class = "flex-root">
+			<h1 class = "header-text">Welcome to INP shop!</h1>
+			<br>
+			<div class = "flex-navigation">
+				<a href = "http://2020147524.github.io/HomeworkRepository/LAB3">메인 페이지</a>
+				
+				<a href = "http://2020147524.github.io/HomeworkRepository/LAB3/login.html">로그인</a>
+
+				<a href = "http://2020147524.github.io/HomeworkRepository/LAB3/signup.html">회원가입</a>
+			</div>
+			<div class = "main-contents">
+				<div class = "flex-container">
+					<img src="pencilcase.jpg" alt="pencilcase" width="100px" height="100px" class="pencilcase">
+				</div>
+				<div class = "flex-container">
+					<img src="pencilcase.jpg" alt="pencilcase" width="100px" height="100px">
+				</div>
+				<div class = "flex-container">
+					<img src="pencilcase.jpg" alt="pencilcase" width="100px" height="100px">
+				</div>
+				<div class = "flex-container">
+					<img src="pencilcase.jpg" alt="pencilcase" width="100px" height="100px">
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
