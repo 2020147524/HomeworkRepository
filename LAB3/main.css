@@ -15,11 +15,10 @@ input {
 	flex-direction: row;
 	justify-content: space-between;
 	border: 5px solid;
-	width: 800px;
+	width: 900px;
 	height: 850px;
 	padding: 20px;
 	margin: 10px;
-
 }
 .signup-border {
 	border: 5px solid;

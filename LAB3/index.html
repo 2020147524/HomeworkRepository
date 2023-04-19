@@ -8,28 +8,26 @@
 		<style type="text/css">
 			.header-text
 			{
+				width: 450px;
+				height: 30px;
 				animation-name: movingtext;
 				animation-duration: 2s;
 			}
 			@keyframes movingtext
 			{
-				from {
-					transform: translateX(25%);
-				}
-
-				to {
-					transform: translateX(0%);
-				}
+				from {margin-left: 100%;}
+    			to {margin-left: 0%;}
 			}
 		</style>
 
 		<style type="text/css">
-			.flex-root {
-				display: flex;
-				flex-direction: column;
-				font-size: 30px;
+			.root {
+				font-size: 20px;
 				text-align: center;
-				max-width: 1020px;
+				width: 1020px;
+    			border: none;
+    			margin-left: auto;
+    			margin-right: auto;
 			}
 			.flex-navigation {
 				display: flex;
@@ -41,11 +39,14 @@
 				margin: 10px;
 			}
 			.flex-container {
+				border : 1px solid;
 				display: flex;
 				flex-direction: row;
 				font-size: 30px;
 				text-align: center;
-				max-width: 200px;
+				width: 200px;
+				margin-left: 5px;
+				margin-right: 5px;
 			}
 			/* Responsive layout - makes a one column-layout instead of two-column layout */
 			@media (max-width: 1020px) {
@@ -58,31 +59,72 @@
 				transform: scale(1.5);
 				transition: all 2s;
 			}
+
+			.container {
+				position: relative;
+				width: 100px;
+				height: 100px;
+			}
+
+			.image {
+				opacity: 1;
+				display: block;
+				width: 100%;
+				height: 100%;
+				transition: .5s ease;
+				backface-visibility: hidden;
+			}
+
+			.middle {
+				transition: .5s ease;
+				opacity: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+			}
+
+			.container:hover .middle {
+			 	opacity: 1;
+			}
 		</style>
 	</head>
 	<body>
-		<div class = "flex-root">
-			<h1 class = "header-text">Welcome to INP shop!</h1>
-			<br>
-			<div class = "flex-navigation">
-				<a href = "http://2020147524.github.io/HomeworkRepository/LAB3">메인 페이지</a>
-				
-				<a href = "http://2020147524.github.io/HomeworkRepository/LAB3/login.html">로그인</a>
+		<header>
+			<div class = "root">
+				<h1 class = "header-text">Welcome to INP shop!</h1>
+				<div class = "flex-navigation">
+					<a href = "http://2020147524.github.io/HomeworkRepository/LAB3">메인 페이지</a>
+					
+					<a href = "http://2020147524.github.io/HomeworkRepository/LAB3/login.html">로그인</a>
 
-				<a href = "http://2020147524.github.io/HomeworkRepository/LAB3/signup.html">회원가입</a>
+					<a href = "http://2020147524.github.io/HomeworkRepository/LAB3/signup.html">회원가입</a>
+				</div>
 			</div>
+		</header>
+		<div class = "root">
 			<div class = "main-contents">
 				<div class = "flex-container">
-					<img src="pencilcase.jpg" alt="pencilcase" width="100px" height="100px" class="pencilcase">
+					<img src="pencilcase.png" alt="pencilcase" width="100px" height="100px" class="pencilcase">
+					<div class = "container">
+						<img src="brush.png" alt="brush" class="image">
+						<div class="middle">
+							brush
+						</div>
+					</div>
 				</div>
 				<div class = "flex-container">
-					<img src="pencilcase.jpg" alt="pencilcase" width="100px" height="100px">
+					<img src="pen.png" alt="pen" width="100px" height="100px">
+					<img src="color_pencil.png" alt="color_pencil" width="100px" height="100px">
 				</div>
 				<div class = "flex-container">
-					<img src="pencilcase.jpg" alt="pencilcase" width="100px" height="100px">
+					<img src="sharp.png" alt="sharp" width="100px" height="100px">
+					<img src="eraser.png" alt="eraser" width="100px" height="100px">
 				</div>
 				<div class = "flex-container">
-					<img src="pencilcase.jpg" alt="pencilcase" width="100px" height="100px">
+					<img src="pencilcase.png" alt="pencilcase" width="100px" height="100px">
+					<img src="signpen.png" alt="signpen" width="100px" height="100px">
 				</div>
 			</div>
 		</div>
