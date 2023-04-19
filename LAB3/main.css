@@ -12,12 +12,18 @@ input {
 }
 .main-contents {
 	display: flex;
+	flex-direction: column;
+	border: 5px solid;
+	max-width: 900px;
+	height: auto;
+}
+.image-group {
+	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	border: 5px solid;
-	width: 900px;
-	height: 850px;
-	padding: 20px;
+	width: auto;
+	height: auto;
+	padding: 5px;
 	margin: 10px;
 }
 .signup-border {
@@ -46,3 +52,102 @@ input {
 
 a.nodec {text-decoration: none;}
 a:hover {text-decoration: underline; color: red;}
+
+.header-text {
+	max-width: 320px;
+	height: 30px;
+	animation-name: movingtext;
+	animation-duration: 2s;
+}
+
+@keyframes movingtext {
+	from {margin-left: 100%;}
+	to {margin-left: 0%;}
+}
+
+.root {
+	font-size: 15px;
+	text-align: center;
+	width: 1020px;
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.flex-navigation {
+	display: flex;
+	flex-direction : row;
+	flex-wrap: wrap;
+	justify-content: left;
+}
+.flex-navigation > a {
+	margin: 10px;
+}
+.flex-container {
+	border : 1px solid;
+	display: flex;
+	flex-direction: row;
+	font-size: 18px;
+	text-align: center;
+	max-width: 200px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.flex-introduction {
+	display: flex;
+	flex-direction: column;
+	max-width: 800px;
+}
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+	.flex-container {
+		flex-direction: column;
+	}
+	.main-contents {
+		max-width: 480px;
+	}
+}
+@media (max-width: 480px) {
+	.flex-container {
+		flex-direction: column;
+	}
+	.main-contents {
+		max-width: 200px;
+	}
+	.image-group {
+		flex-direction: column;
+	}
+}
+
+.pencilcase:hover {
+	transform: scale(1.5);
+	transition: all 2s;
+}
+
+.container {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.image {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.container:hover .middle {
+ 	opacity: 1;
+}
