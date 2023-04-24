@@ -98,12 +98,12 @@ a:hover {text-decoration: underline; color: red;}
 	max-width: 800px;
 }
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
+@media ((min-width: 481px) and (max-width: 800px)) {
 	.flex-container {
 		flex-direction: column;
 	}
 	.main-contents {
-		max-width: 480px;
+		max-width: 440px;
 	}
 }
 @media (max-width: 480px) {
@@ -125,8 +125,8 @@ a:hover {text-decoration: underline; color: red;}
 
 .container {
 	position: relative;
-	width: 100px;
-	height: 100px;
+	width: 90px;
+	height: 90px;
 }
 
 .image {
