@@ -2,7 +2,7 @@
 {
     "name" : "Jetstream Pen",
     "price" : "$2.87",
-    "image" : "pen.png",
+    "image" : "pen11.png",
     "type" : ["pen"]
 },
 {
@@ -26,7 +26,7 @@
 {
     "name" : "Classic Pen",
     "price" : "$2.00",
-    "image" : "pen5.png",
+    "image" : "pen15.png",
     "type" : ["pen"]
 },
 {
@@ -44,7 +44,7 @@
 {
     "name" : "Golden Pen",
     "price" : "$32.12",
-    "image" : "premium&pen2.png",
+    "image" : "premium&pen12.png",
     "type" : ["pen", "premium"]
 },
 {
@@ -104,7 +104,7 @@
 {
     "name" : "White Eraser",
     "price" : "$1.26",
-    "image" : "eraser.png",
+    "image" : "eraser6.png",
     "type" : ["eraser"]
 },
 {
