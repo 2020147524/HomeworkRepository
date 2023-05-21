@@ -102,21 +102,9 @@
     "type" : ["pencilcase", "premium"]
 },
 {
-    "name" : "Blue Eraser",
+    "name" : "White Eraser",
     "price" : "$1.26",
     "image" : "eraser.png",
-    "type" : ["eraser"]
-},
-{
-    "name" : "Red Eraser",
-    "price" : "$1.28",
-    "image" : "eraser2.png",
-    "type" : ["eraser"]
-},
-{
-    "name" : "White Eraser",
-    "price" : "$1.32",
-    "image" : "eraser3.png",
     "type" : ["eraser"]
 },
 {
