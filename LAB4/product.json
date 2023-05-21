@@ -102,12 +102,6 @@
     "type" : ["pencilcase", "premium"]
 },
 {
-    "name" : "White Eraser",
-    "price" : "$1.26",
-    "image" : "eraser6.png",
-    "type" : ["eraser"]
-},
-{
     "name" : "Ain Eraser",
     "price" : "$3.12",
     "image" : "premium&eraser.png",
