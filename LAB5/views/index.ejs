@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>LAB5 - main</title>
+        <link rel="stylesheet" type = "text/css" href="/css/main.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <header class = "root">
+            <div class = "root">
+                <h1 class = "header-text">Welcome to INP shop!</h1>
+                <div class = "flex-navigation">
+                    <a href = "/">메인 페이지</a>
+                    
+                    <a href = "/login">로그인</a>
+
+                    <a href = "/signup">회원가입</a>
+                </div>
+            </div>
+        </header>
+        <div class = "root">
+            <aside>
+                <form>
+                    <div class = "searchMenu">
+                        <label for="category">Choose a category:</label>
+                        <select id="category">
+                            <option selected>All</option>
+                            <option>Pen</option>
+                            <option>Pencilcase</option>
+                            <option>Eraser</option>
+                            <option>Premium</option>
+                        </select>
+                    </div>
+                    <div class = "searchMenu">
+                        <label for="searchTerm">Enter search term:</label>
+                        <input type="text" id = "searchTerm" placeholder="e.g. HTML">
+                    </div>
+                    <div class = "searchMenu">
+                        <button type = "button" id="filter" onclick="filtering()">Filter results</button>
+                    </div>
+                </form>
+            </aside>
+        </div>
+        <main>
+            <div id="listProduct">
+                <% for( let i = 0; i < products.length; i++ ) { %>
+                    <div class="image_container">
+                        <img src="images/<%=products[i].product_image%>" alt="<%=products[i].product_title%>">
+                        <button class="clicks" id="<%=products[i].product_id%>">Click to see more</button>
+                    </div>
+                <% } %>
+            </div>    
+        </main>
+    </div>
+</body>
+
+<script>
+    function filtering() {
+        let category = $("#category").val();
+        let key = $("#searchTerm").val().trim();
+
+        $.ajax({
+            type: 'POST',
+            url: '/',
+            data: {chosenCategory: category, searchKeyword: key},
+            success: function(result) {
+                //alert(JSON.stringify(result));
+                let product = result;
+                // let modify = document.querySelector("#listProduct");
+                // modify.remove();
+                $("#listProduct").empty();
+                if (product.length != 0) {
+                    let html = '';
+                    for (let i = 0; i < product.length; i++) {
+                        html += '<div class="image_container"><img src="images/' + product[i].product_image + '" alt="' + product[i].product_title + '">';
+                        html += '<button class="clicks" id="' + product[i].product_id + '">Click to see more</button></div>';   
+                    }
+                    $("#listProduct").html(html);
+                }
+                else {
+                    let html = '<p>No products to display</p>';
+                    $("#listProduct").html(html);
+                }
+            },
+            error: function() {
+                alert('실패');
+            }
+        })        
+    }
+
+    $(document).on("click", ".clicks", function(e){ 
+        let show_product = e.target.getAttribute("id");
+
+        location.href = '/product/' + show_product;
+    })
+</script>
+
+</html>

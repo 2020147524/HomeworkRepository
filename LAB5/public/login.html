@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>LAB5 - login</title>
+		<link rel = "stylesheet" type = "text/css" href = "css/main.css">
+	</head>
+	<body>
+		<header class = "root">
+			<div class = "root">
+				<h1>Welcome to INP shop!</h1>
+				<div class = "flex-navigation">
+					<a href = "/">메인 페이지</a>
+					
+					<a href = "/login">로그인</a>
+
+					<a href = "/signup">회원가입</a>
+				</div>
+			</div>
+		</header>
+		<div class="root">
+			<div class = "login-border">
+				<form method = "GET" autocomplete = "on" action = "https://www.example.com">
+					<p>
+						<label>유저 아이디: <input name = "user_id" type = "text" placeholder = "아이디를 입력하세요" required /> </label>
+					</p>
+					<p>
+						<label>비밀번호: <input name = "password" type = "text" placeholder = "비밀번호 입력하세요" required /> </label>
+					</p>
+					<p>
+						<label>비밀번호 확인: <input name = "password correct" type = "text" placeholder = "비밀번호 확인" required /> </label>
+					</p>
+					<p>
+						<input class = "login-button" type = "submit" value = "로그인" />
+						<input class = "reset-button" type = "reset" value = "초기화" />
+					</p>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

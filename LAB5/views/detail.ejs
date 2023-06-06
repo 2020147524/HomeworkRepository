@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB5 - detail</title>
+    <link rel="stylesheet" type = "text/css" href="/css/main.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 class="heading">안녕하세요 인터넷프로그래밍 샵 입니다</h1>
+            <nav>
+                <a href="/">메인페이지</a>
+                <a href="/login">로그인</a>
+                <a href="/signup">회원가입</a>
+            </nav>
+        </div>
+    </header>
+    <hr>
+    <div class="border">
+        <div id="image_detail">
+            <img class="image_detail" src="/images/<%=productDetail[0].product_image%>" alt="<%=productDetail[0].product_title%>">
+        </div>
+        <div id="product_detail">
+            <p style="font-size: 20px;"><b>ID: <%=productDetail[0].product_id%></b></p>
+            <p style="font-size: 20px;"><b>Title: <%=productDetail[0].product_title%></b></p>
+            <p style="font-size: 20px;"><b>Price: <%=productDetail[0].product_price%></b></p>
+            <p style="font-size: 20px;"><b>Category: <%=productDetail[0].product_category%></b></p>
+            <br>
+            <div id="reviews">
+                <p style="margin-bottom: 3%;"><b>Reviews: </b></p>
+                <p style="margin: 0%;">Submit your review:</p>
+                <input type="text" placeholder="review comment" style="width: 60%;">
+                <button type="button" id="submitReview" name="<%=productDetail[0].product_id%>">Submit</button>
+            </div>
+        </div>
+        <div id="comments">
+            <table id="commentTable">
+                <th style="border: solid thin;">Feedback</th>
+                <% for( let i = 0; i < Comment.comments.length; i++ ) { %>
+                    <tr><td style="border: solid thin;"><%=Comment.comments[i]%></td></tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        $(document).on("click", "#submitReview", function(e) {
+            let newComment = $("input").val();
+            let productID = e.target.getAttribute("name");
+
+            $.ajax({
+                type: 'POST',
+                url: '/product/' + productID,
+                data: { comment: newComment },
+                success: function(result) {
+                    location.reload();
+                    // let commentslist = result;
+                    // alert(result);
+
+                    // $("#commentTable").empty();
+                    // let html = '<th style="border: solid thin;">Feedback</th>';
+                    // alert(commentslist.comments.length);
+                    // for (let i = 0; i < commentslist.comments.length; i++) {
+                    //     html += '<tr><td style="border: solid thin;">' + commentslist.comments[i] + '</td></tr>';
+                    // }
+                    // alert(html);
+                    // $("#commentTable").html(html);
+                },
+                error: function() {
+                    alert('실패');
+                }
+            })
+        })
+    </script>
+</body>
+</html>
